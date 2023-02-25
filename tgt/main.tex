@@ -1,12 +1,7 @@
 % Stolen from Joshua J. Daymude
 
-!def ^>\s(?P<name>.+) \section{$name}
-!def ^>>\s(?P<name>.+) \subsection{$name}
 
-!def \*(?P<text>.+)\* \textbf{$text}
-!def /(?P<text>.+)/ \textit{$text}
 
-!import info.coen
 
 \documentclass[10pt]{article}
 \usepackage[margin=1in, headheight=13.6pt]{geometry}
@@ -41,27 +36,32 @@
 % Style the headers and footers.
 \fancypagestyle{firststyle}
 {
-   \fancyhf{}
-   \cfoot{Page \thepage\ of \pageref{LastPage}}
-   \renewcommand{\headrulewidth}{0pt}
+\fancyhf{}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
 }
 \fancypagestyle{nonfirststyle}
 {
-   \fancyhf{}
-   \chead{\textbf{$TITLE}}
-   \rhead{$AUTHOR}
-   \cfoot{Page \thepage\ of \pageref{LastPage}}
+\fancyhf{}
+\chead{\textbf{Sample Document}}
+\rhead{Some Guy}
+\cfoot{Page \thepage\ of \pageref{LastPage}}
 }
 \pagestyle{nonfirststyle}
 
-\title{\large{\textbf{$TITLE}}}
-\author{$AUTHOR}
-\date{$DATE}
+\title{\large{\textbf{Sample Document}}}
+\author{Some Guy}
+\date{}
 
 \begin{document}
 \maketitle
 
 \thispagestyle{firststyle}
-!import main.coen
+\section{Heading}
+Content
+\subsection{Subheading}
+Subheading Content.
+
+\textbf{Bold text} and \textit{italics too}!
 
 \end{document}
