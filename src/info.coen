@@ -1,4 +1,6 @@
 !set TARGET ../tgt/main.tex
-!set TITLE Sample Document
-!set AUTHOR Some Guy
+!set TITLE $COURSE: $DOCUMENT
+!set COURSE Course
+!set DOCUMENT Document
+!set AUTHOR Author
 !set DATE
