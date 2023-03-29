@@ -1,4 +1,4 @@
-% Stolen from Joshua J. Daymude
+% Stolen from Dr. Joshua J. Daymude - https://jdaymude.github.io/
 
 !def ^>\s(?P<name>.+) \section{$name}
 !def ^>>\s(?P<name>.+) \subsection{$name}
